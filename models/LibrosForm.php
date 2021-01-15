@@ -17,6 +17,14 @@ class LibrosForm extends Model
     public $titulo;
     public $autor;
 
+    public function rules()
+    {
+        return [
+            [['titulo'], 'required'],
+            [['autor'], 'safe'],
+        ];
+    }
+
 public function attributeLabels()
 {
     return [
